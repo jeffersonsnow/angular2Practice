@@ -1,0 +1,18 @@
+<h1> String Interpolation </h1>
+<p>
+  {{stringInterpolation}} | {{numberInterpolation}}
+</p>
+<hr>
+<h1>Property Binding</h1>
+<input type="text" value="{{stringInterpolation}} with curlies">
+<input type="text" [value]="stringInterpolation"> <!--these to lines look the same-->
+<p [ngClass]="{redBorder: onTest()}">Is this styled?</p> <!-- You can go in write javascript in these objects, keep it to one line or it doesn't work. Basically just evaluating true or false-->
+<p [ngStyle]="{color: 'green'}">Is this styled?</p>
+<h3>Custom Property Binding</h3>
+<fa-property-binding [result]="10"></fa-property-binding>
+<hr>
+<h1>Event Binding</h1>
+<fa-event-binding (clicked)="onClicked($event)"></fa-event-binding>
+<hr>
+<h1>Two-Way Databinding</h1>
+<app-two-way-databinding></app-two-way-databinding>
